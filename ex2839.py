@@ -1,11 +1,16 @@
-n = int(input(""))
+num = int(input(""))
 
-result = n // 5
-rest = n % 5
+bucket = 0
 
-print(result, rest)
+while True:
+    if num % 5 == 0:
+        bucket = bucket + (num//5)
+        print(bucket)
+        break
 
-if (n%3==0) and (n%5==0):
-    print("-1")
+    num -= 3
+    bucket += 1
 
-#5로 나눈후에 
+    if num < 0:
+        print("-1")
+        break
