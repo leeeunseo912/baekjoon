@@ -1,12 +1,16 @@
 import sys
-n = int(sys.stdin.readline())
+input = sys.stdin.readline
+n = int(input())
 
-number = []
+number = [0] * 10001
+
 for i in range(n):
-    num = int(sys.stdin.readline())
-    number.append(num)
+    num = int(input())
+    number[num] += 1
+# print("=========")
 
-number = sorted(number)
-
-for i in number:
-    print(i)
+for i in range(10001):
+    if number[i] != 0:
+        for j in range(number[i]):
+            print(i)
+        
