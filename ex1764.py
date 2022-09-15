@@ -9,7 +9,6 @@ for i in range(n):
     name = input()
     hear.add(name)
 
-see = set()
 result = []
 
 for i in range(m):
